@@ -30,7 +30,10 @@
               </figure>
               <article class="product-box_data">
                 <h2><%=element.price%></h2>
-                <span><%=element.discount%></span>
+                <span
+                  ><%= element.discount !== 0 ? element.discount + '%' + ' OFF'
+                  : '' %></span
+                >
                 <p><%= element.name %></p>
                 <i class="fas fa-truck"></i>
               </article>
@@ -61,7 +64,7 @@
               </figure>
               <article class="product-box_data">
                 <h2><%=element.price%></h2>
-                <span><%=element.discount%></span>
+                <span><%=element.discount%>% OFF</span>
                 <p><%=element.name%></p>
                 <i class="fas fa-truck"></i>
               </article>
