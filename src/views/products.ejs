@@ -1,4 +1,4 @@
-«<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
   <!-- Include Head -->
   <%- include('partials/head', {title: 'Todos los productos'}) %>
@@ -25,16 +25,17 @@
               </figure>
               <article class="product-box_data">
                 <h2>
-                  $ <% if (element.discount > 0) { let discountAmount =
+                  <% if (element.discount > 0) { let discountAmount =
                   (element.price * element.discount) / 100; let discountPrice =
                   element.price - discountAmount; %> <%=
                   discountPrice.toLocaleString() %> <% } else { %> <%=
-                  element.price.toLocaleString() %> <% } %>
+                  element.price %> <% } %>
                 </h2>
                 <span
                   ><%= element.discount !== 0 ? element.discount + '%' + ' OFF'
                   : '' %></span
                 >
+
                 <p><%=element.name%></p>
                 <i class="fas fa-truck"></i>
               </article>
